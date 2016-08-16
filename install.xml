@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template name="locality_restaurants">
+	<title>Locality Restaurants</title>
+	<summary>Local restaurants directory template</summary>
+	<author>Intelliants LLC</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>4.0.0</version>
+	<date>2016-08-16</date>
+	<compatibility>4.0</compatibility>
+
+	<layout>
+		<position menu="1" movable="0">inventory</position>
+		<position menu="1" movable="0">account</position>
+		<position menu="1" movable="0">mainmenu</position>
+		<position menu="1" movable="0">copyright</position>
+
+		<position movable="0">header</position>
+		<position movable="0">change_location</position>
+		<position>verytop</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>verybottom</position>
+
+		<section name="after-header">
+			<position width="4">after_header_1</position>
+			<position width="4">after_header_2</position>
+			<position width="4">after_header_3</position>
+		</section>
+		<section name="content">
+			<position width="9">center</position>
+			<position fixed="1">right</position>
+		</section>
+		<section name="user-blocks">
+			<position fixed="1">user1</position>
+			<position fixed="1">user2</position>
+		</section>
+		<section name="footer">
+			<position width="3">footer1</position>
+			<position width="3">footer2</position>
+			<position width="3">footer3</position>
+			<position width="3">footer4</position>
+		</section>
+	</layout>
+
+	<screenshots>
+		<screenshot name="1.jpg"><![CDATA[Frontend -> Home Page]]></screenshot>
+		<screenshot name="2.jpg"><![CDATA[Frontend -> Home Page blocks]]></screenshot>
+	</screenshots>
+
+	<configgroup name="template_locality_restaurants">Template</configgroup>
+
+	<config group="template_locality_restaurants" 
+		    type="divider"
+		    order="3000">General</config>
+
+	<config group="template_locality_restaurants" 
+		    name="max_top_menu_items" 
+		    type="text" 
+		    description="Max number of items in Main Menu"
+		    order="3002">6</config>
+
+	<config group="template_locality_restaurants" 
+		    name="ckeditor_css" 
+		    type="hidden" 
+		    description="CKEditor CSS"
+		    order="3099">ckeditor.css</config>
+
+	<changeset>
+		<block status="inactive">common_statistics</block>
+		<block status="inactive">latest_blog_posts</block>
+		<block status="inactive">all_cities</block>
+		<block status="inactive">newsline</block>
+		<block status="inactive">blogroll</block>
+
+		<block position="right" status="active" order="-1">venue_owner</block>
+		<block position="right">new_blog_posts</block>
+		<block position="change_location">change_location</block>
+		<block position="bottom" classname="box--border" sticky="0" pages="index">latest_news</block>
+		<block position="top" order="0" classname="box--border" sticky="0" pages="index" status="active" title="New restaurants">new_venues</block>
+		<block position="top" order="1" classname="box--border" sticky="0" pages="index" title="Popular restaurants">popular_venues</block>
+		<block position="top" order="2" classname="box--border" sticky="0" pages="index">popular_categories</block>
+		<block status="active" position="header">venues_search</block>
+		<menu position="account" order="0">account</menu>
+		<menu order="1">inventory</menu>
+		<menu status="active" position="right" title="Find restaurants">yellowpages</menu>
+	</changeset>
+
+	<blocks>
+		<block name="after_header_1" 
+			   title="Headline block #1" 
+			   position="after_header_1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="top-headline-block">
+	<a href="#" class="headline-icon">1</a>
+	<p>Search restaurants/bars/cafes by title/name, category or location</p>
+	<p><a href="#">Check me out <i class="fa fa-long-arrow-right"></i></a></p>
+</div>
+			]]>
+		</block>
+		<block name="after_header_2" 
+			   title="Headline block #2" 
+			   position="after_header_2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="top-headline-block">
+	<a href="#" class="headline-icon">2</a>
+	<p>Contact listing owner: request details of business you are interested in</p>
+	<p><a href="#">Check me out <i class="fa fa-long-arrow-right"></i></a></p>
+</div>
+			]]>
+		</block>
+		<block name="after_header_3" 
+			   title="Headline block #3" 
+			   position="after_header_3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="top-headline-block">
+	<a href="#" class="headline-icon">3</a>
+	<p>List your own restaurant at affordable prices and earn with us!</p>
+	<p><a href="#">Check me out <i class="fa fa-long-arrow-right"></i></a></p>
+</div>
+			]]>
+		</block>
+		<block name="html_block1" 
+			   title="HTML block #1" 
+			   position="right" 
+			   header="1"
+			   collapsible="1" 
+			   sticky="1" 
+			   status="active" 
+			   order="99"
+			   type="smarty">
+			<![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>Ne lorem percipit efficiantur mei, ius ut simul vidisse. An vel probatus explicari appellantur. Has et comprehensam interpretaris, quo no inimicus maluisset temporibus. Ea mea quod.</p>
+			]]>
+		</block>
+		<block name="footer1" 
+			   title="Footer block #1" 
+			   position="footer1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="headline-block">
+	<h4 class="title"><i class="fa fa-map-marker"></i> Yellow Pages</h4>
+	<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+</div>
+			]]>
+		</block>
+		<block name="footer2" 
+			   title="Footer block #2" 
+			   position="footer2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="headline-block">
+	<h4 class="title"><i class="fa fa-bolt"></i> Get in touch</h4>
+	<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+</div>
+			]]>
+		</block>
+		<block name="footer3" 
+			   title="Footer block #3" 
+			   position="footer3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="headline-block">
+	<h4 class="title"><i class="fa fa-info-sign"></i> About us</h4>
+	<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+</div>
+			]]>
+		</block>
+		<block name="footer4" 
+			   title="Footer block #4" 
+			   position="footer4" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<div class="headline-block">
+	<h4 class="title"><i class="fa fa-dollar"></i> Advertise</h4>
+	<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+</div>
+			]]>
+		</block>
+	</blocks>
+
+	<phrases>
+		<phrase key="header_title" category="frontend"><![CDATA[Local restaurants<br>directory]]></phrase>
+		<phrase key="header_subtitle" category="frontend"><![CDATA[<p>Find perfect place to spend an evening.</p><p>Beatae eum error quisquam voluptatum architecto dolor alias corrupti aut.</p>]]></phrase>
+		<phrase key="search_for" category="frontend">Search for restaurants</phrase>
+		<phrase key="register" category="frontend">Register</phrase>
+		<phrase key="near" category="frontend">Near</phrase>
+		<phrase key="page_title_yellowpages_index" category="page">restaurants</phrase>
+		<phrase key="yellowpages" category="common">restaurants</phrase>
+	</phrases>
+</template>

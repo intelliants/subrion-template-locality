@@ -1,0 +1,166 @@
+.section {
+  padding: @sectionPadding;
+  background: @sectionBg;
+
+  &-narrow {
+    padding: @sectionPaddingNarrow;
+  }
+}
+
+// TEASER
+//---------------------------
+
+.section--teaser {
+  padding: 110px 0;
+
+  background: url('../img/bg.jpg') 50% center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--inner {
+    background: #f5f5f5;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.b-srch {
+  background: #bf392b;
+  padding: 20px;
+  .box-shadow(0px 0px 70px 0px rgba(0,0,0,0.85));
+
+  form {
+    margin: 0;
+
+    label {
+      color: #fff;
+    }
+
+    input {
+      border-color: #fff;
+      .box-shadow(none);
+    }
+
+    .btn-actions {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin: 20px -20px 0;
+      padding: 20px 20px 0;
+    }
+  }
+
+  &--inner {
+    max-width: 100%;
+    margin: 0;
+    .box-shadow(none);
+    background: none;
+    padding: 20px 0;
+
+    form {
+
+      label {
+        color: #bbb;
+      }
+
+      input {
+        border-color: @input-border;
+      }
+    }
+  }
+}
+
+.headline {
+
+  h2 {
+    font-size: 50px;
+    color: #fff;
+    margin: 0;
+  }
+
+  p {
+    color: #fff;
+    margin: 0;
+  }
+}
+
+
+
+// TOP HEADLINES
+//---------------------------
+
+.top-headlines {
+  background: #f5f5f5;
+
+  .box {
+    margin-bottom: 0;
+  }
+
+}
+
+.top-headline-block {
+
+  .headline-icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 54px;
+    font-size: 30px;
+    border: 3px solid #cb4e44;
+    color: #cb4e44;
+
+    &:hover {
+      text-decoration: none;
+      color: #cb4e44;
+    }
+  }
+}
+
+.section.section--footer-blocks {
+  padding: 100px 0;
+  background: #333 url('../img/footer-bg.jpg') 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+
+  .headline-block {
+  	color: #777;
+  	.title {
+  		color: #999;
+  		font-weight: bold;
+  	}
+  }
+}
+
+@media (max-width: 767px) {
+  .section--footer-blocks {
+    .box {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
