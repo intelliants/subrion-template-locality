@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<template name="locality_restaurants">
+<module type="template" name="locality_restaurants">
 	<title>Locality Restaurants</title>
 	<summary>Local restaurants directory template</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>4.0.1</version>
-	<date>2016-08-16</date>
-	<compatibility>4.0</compatibility>
+	<version>4.1.0</version>
+	<date>2017-08-02</date>
+	<compatibility>4.1</compatibility>
 
 	<layout>
 		<position menu="1" movable="0">inventory</position>

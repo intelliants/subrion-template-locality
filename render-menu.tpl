@@ -7,7 +7,7 @@
 		<ul class="nav navbar-nav nav-inventory">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					{printImage imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=20}
+					{ia_image imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=20}
 
 					{$member.fullname|default:$member.username}
 					<span class="caret"></span>

@@ -58,7 +58,7 @@ $(function()
 
 			return $.ajax(
 			{
-				url: intelli.config.packages.yellowpages.url + 'yellowpages/read.json',
+				url: intelli.config.modules.yellowpages.url + 'yellowpages/read.json',
 				type: 'get',
 				dataType: 'json',
 				data: { action: 'autocomplete', q: query },

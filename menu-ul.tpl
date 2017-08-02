@@ -39,7 +39,7 @@
 			{/foreach}
 
 			<!-- MORE menu dropdown -->
-			{if isset($dropdown) && $menu.level < 1}
+			{if !empty($dropdown) && $menu.level < 1}
 				<li class="dropdown dropdown-more">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">{lang key='more'} <span class="caret"></span></a>
 

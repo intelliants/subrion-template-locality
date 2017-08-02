@@ -1,10 +1,10 @@
-{if !empty($newVenues)}
+{if !empty($popularVenues)}
 	<div class="row yp-listings">
-		{foreach $newVenues as $entry}
+		{foreach $popularVenues as $entry}
 			<div class="col-md-3">
 				<div class="yp-listings__b">
 					<a href="{ia_url item='venues' type='url' data=$entry}" class="yp-listings__b__image">
-						{printImage imgfile=$entry.image.path|default:'' title=$entry.venue_title class='img-responsive'}
+						{ia_image imgfile=$entry.image.path|default:'' title=$entry.venue_title class='img-responsive'}
 					</a>
 
 					<div class="yp-listings__b__body">
