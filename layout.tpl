@@ -62,7 +62,7 @@
 
 		<nav  class="clearfix">
 			<div class="container">
-				<a href="#" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar-collapse"><i class="icon-reorder"></i></a>
+				<a href="#" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar-collapse"><i class="icon-reorder fa fa-bars"></i></a>
 
 				<form id="fast-search" method="post" action="{$smarty.const.IA_URL}search/" class="form-inline">
 					<div class="wrp">
@@ -73,7 +73,7 @@
 
 				{ia_blocks block='change_location'}
 			
-				<div id="navbar-collapse">
+				<div id="navbar-collapse" class="collapse nav-collapse">
 					{ia_blocks block='mainmenu'}
 				</div>
 			</div>

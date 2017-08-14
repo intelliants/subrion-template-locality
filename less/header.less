@@ -87,12 +87,12 @@ header {
       margin-left: 20px;
       padding: 0;
       line-height: 20px;
-      color: lighten(@baseDarkColor, 30%);
+      color: lighten(@baseDarkColor, 80%);
       text-transform: uppercase;
 
       &:hover {
         background: none;
-        color: lighten(@baseDarkColor, 10%);
+        color: lighten(@baseDarkColor, 50%);
       }
       
     }
@@ -100,7 +100,7 @@ header {
     &.active > a,
     &.active > a:hover,
     &.active > a:focus {
-      color: lighten(@baseDarkColor, 10%);
+      color: lighten(@baseDarkColor, 60%);
       background: none;
     }
   }
@@ -124,24 +124,27 @@ header {
 
 @media (max-width: 600px) {
   header {
+    padding-bottom: 14px;
     > .container {
       height: auto;
     }
     .btn-add,
     .btn-group {
-      margin: 15px 0 15px 15px;
+      margin: 0;
+      float: right;
+      margin: -7px 0 0 0;
     }
   }
 
   .brand {
     position: static;
     margin: 15px 15px 15px 0;
-    float: left;
+    display: block;
+    float: none;
   }
 
   .nav-inventory {
     float: none;
-    clear: both;
 
     > li > a {
       margin-left: 0;
