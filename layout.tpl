@@ -53,6 +53,7 @@
 				<a href="{$smarty.const.IA_URL}add/" class="btn btn-success btn-add"><i class="fa fa-plus-circle"></i> <span>Get listed</span></a>
 
 				{include file='language-selector.tpl'}
+				{include 'currency-selector.tpl'}
 
 				{ia_blocks block='account'}
 				{ia_blocks block='inventory'}
