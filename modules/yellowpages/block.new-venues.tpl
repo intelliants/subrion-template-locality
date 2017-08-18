@@ -4,7 +4,7 @@
 			<div class="col-md-3">
 				<div class="yp-listings__b">
 					<a href="{ia_url item='venues' type='url' data=$entry}" class="yp-listings__b__image">
-						{ia_image imgfile=$entry.image.path|default:'' title=$entry.venue_title class='img-responsive'}
+						{ia_image file=$entry.image title=$entry.venue_title type='large' class='img-responsive'}
 					</a>
 
 					<div class="yp-listings__b__body">
